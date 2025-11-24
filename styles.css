@@ -89,7 +89,6 @@ nav .mega-menu ul li:hover {
 
 main {
     grid-area: main;
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     flex-direction: column;
