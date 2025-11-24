@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 220vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 0.1fr 2fr 0.4fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer"
+    ;
+
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 80px;
+    background: black;
+    padding: 10px;
+}
+
+header .logo {
+    position: fixed;
+    left: 20px;
+    height: 50px;
+}
+
+nav ul.menu li {
+    color: white;
+    display: inline;
+    margin: 20px;
+}
+
+.search-icon {
+    position: fixed;
+    right: 30px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+
+nav .mega-menu {
+    position: absolute;
+    left: 25%;
+    width: 50vw;
+    background: black;
+    padding: 30px;
+    display: none;
+    grid-template-columns: repeat(5, 1fr);
+    color: white;
+    z-index: 999;
+}
+
+
+nav:hover .mega-menu {
+    display: grid;
+}
+
+
+nav .mega-menu .columna h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #ffcc00;
+}
+
+nav .mega-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav .mega-menu ul li {
+    margin-bottom: 8px;
+}
+
+nav .mega-menu ul li:hover {
+    color: darkblue;
+}
+
+
+main {
+    grid-area: main;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: lightgray;
+    padding: 20px;
+}
+
+
+.new-arrivals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+.titulo {
+    position: absolute;
+    top: 15%;
+    left: 100px;
+}
+
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: white;
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    padding: 20px;
+}
+
+.item:hover {
+    transform: scale(1.1);
+}
+
+.item>img {
+    height: 200px;
+    width: 200px;
+}
+
+.by-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 100px;
+}
+
+.by-group>h1 {
+    position: absolute;
+    right: 120px;
+    color: lightgray;
+    z-index: 1000;
+}
+
+
+.by-group>a {
+    background: url(/Assets/Screenshot_13.png),
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(./Assets/Screenshot_13.png);
+    background-size: cover;
+    height: 500px;
+    width: 80%;
+    transform: scale(1);
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.by-group>a:hover {
+    transform: scale(1.1);
+}
+
+
+aside {
+    padding: 10%;
+    grid-area: aside;
+    background: lightgray;
+
+}
+
+
+fieldset {
+    height: 100%;
+    display: flex;
+    align-items: start;
+    flex-flow: column wrap;
+    gap: 10px;
+
+}
+
+.calendar-list {
+    font-size: 20px;
+    height: 350px;
+}
+
+.calendar-list ul li {
+    margin-bottom: 20px;
+}
+
+.calendar-list ul li:hover {
+    color: blue;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+a>img {
+    height: 100px;
+}
+
+.video iframe {
+    margin-top: 50px;
+
+}
+
+
+footer {
+    grid-area: footer;
+    background: black;
+    color: white;
+    padding: 30px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    color: orange;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-section p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer i {
+    font-size: 18px;
+    color: #ffcc00;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+    color: #aaa;
+}
