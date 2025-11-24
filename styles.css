@@ -151,7 +151,7 @@ main {
     position: absolute;
     right: 120px;
     color: lightgray;
-    z-index: 999;
+    z-index: 998;
 }
 
 
@@ -164,7 +164,7 @@ main {
     width: 80%;
     transform: scale(1);
     transition: 0.5s;
-    z-index: 998;
+    z-index: 997;
 }
 
 .by-group>a:hover {
